@@ -1,4 +1,4 @@
-# Mark Ma
+# Marco Quintero
 # Ghidorah 
 # SoftDev
 # K05 -- Read from file, populate dictionary, select random person
