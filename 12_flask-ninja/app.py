@@ -9,6 +9,7 @@ time spent: 0.5
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
 This will cause an error because render_template is not defined in the test_implt() function since it is not imported.
+render_template is a function from flask and must be specified in order to be imported like Flask
 
 Q1:
 http://localhost:5000/my_foist_template
