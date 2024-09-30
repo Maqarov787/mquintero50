@@ -1,6 +1,6 @@
 """
 Marco Quintero
-Ghidorah
+MTA
 SoftDev
 K12 - Flask Render Template
 2024-09-26
@@ -21,10 +21,14 @@ The third argument passes the coll array into the collections variable in the te
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Observed:
 When render_template is removed from input, localhost:5000/my_foist_template displays a NameError and a long
-erorr message is printed in terminal.
+erorr message is printed in terminal. (which returns the purple screen of death)
 
 When localhost:5000/my_foist_template is loaded, the title is foooo, and 0 1 1 2 3 5 8 is displayed on
 different lines.
+
+The @app.route() to the root directory must be called before any readings of other files
+
+What is the {% endfor %} variable in the html file for?
 """
 
 
@@ -33,7 +37,7 @@ different lines.
 # Q0: What will happen if you remove render_template from the following statement?
 # (log prediction before executing...)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask, render_template
+from flask import Flask#, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -54,5 +58,5 @@ def test_tmplt():
 
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = True #Usually do not have this on b/c the debug will show personal files on the website
     app.run()
