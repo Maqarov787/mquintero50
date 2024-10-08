@@ -72,10 +72,14 @@ def htmlOut(template):
     body += f"<p>{RandomManual()}</p>\n"
     body += make_table(jobs)
     template = template.replace("BODY", body)
-    return template    
+    return template
 
-@app.route("/")                         
+@app.route("/")
 def hello_world():
+    return "No hablo queso!"
+
+@app.route("/wdywtbwygp")                         
+def test_tmplt():
     print(__name__)                  
     a = htmlOut(html_website)
     print(a)
