@@ -1,6 +1,6 @@
 # Marco Quintero
 # Ghidorah
-# October 2024
+# 10-07-2024
 
 # import conventions:
 # list most general first (standard python library)
@@ -11,7 +11,7 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 
-import testmod0
+import testmod0 #imports all methods from testmod0.py
 
 #the conventional way:
 #from flask import Flask, render_template, request
@@ -39,19 +39,19 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/") , methods=['GET', 'POST']
+@app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     return render_template( 'login.html' )
 
 
