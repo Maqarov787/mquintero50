@@ -16,13 +16,13 @@ DISCO:
 
 Q/C/C:
 * What is the purpose of methods=['GET', 'POST']? Judging by the name of the list it is a part of, they could be new methods but there are no refs to it anywhere else?
-* 
+* Why do we need to track the request headers?
 * 
 -----------------------------------------------------------------------
 
 
 OTHER?
-* 
+* In usual websites, the submit button doesnt actually redirect the user to another page. It just sends the form response to the url and redirects the user back.
 * 
 * 
 -----------------------------------------------------------------------
