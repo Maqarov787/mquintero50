@@ -1,14 +1,31 @@
-Mark Ma
-Ghidorah - Mark, Danny, Amanda
+Marco Quintero
+Ghidorah - Mark, Danny, Marco
 SoftDev
-K15 - Flask Forms
-2024-10-07
+K16 - Flask Forms
+2024-10-10
 time spent: 0.5
 
 DISCO:
-* When routing the page, the method defaults to "GET" and "POST" must be specified
-* "GET" method can use request.args to get an immutable dictionary called ImmutableMultiDict
-* "POST" method can use request.forms for response pages that can't be accessed normally through a url
+* When authenticate -> store name -> response page stores request.from["username"] in session
+* Pop session when logging out
+* if we get a name that exists from login_page, we redirect to response page
+-----------------------------------------------------------------------
+PLAN
+def login():
+    if "user" in session:
+        redirect to response page
+    else:
+        load login form and post request to response w/ user
+def response():
+    if "user" in request.form:
+        session["user"] = request.form["user"]
+    if "user" in session:
+        load response page with session["username"]
+    else:
+        redirect to login page
+def logout():
+    session.pop("user")
+    redirect to login page
 -----------------------------------------------------------------------
 Q/C/C:
 * Are there other request methods different from "GET" and "POST"?
