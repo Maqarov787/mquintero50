@@ -10,12 +10,19 @@ body {
 nav {
 	float: left;
 	width: 30%;
+    height: 100%;
+    margin-top: -20px;
 }
 
 bruh {
 	color: #ffffff;
 }
 
+footer {
+    color: #ffffff;
+    float: right;
+    background-color: #767676;
+}
 html {
 	font-family: Arial, sans-serif;
 	background-color: #565656;
