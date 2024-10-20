@@ -1,36 +1,33 @@
-#Marco Quintero
-#Ghidorah
-#skeleton/stub :: SQLITE3 BASICS
-#10-18-24
-
+'''
+Mark Ma
+Ghidorah - Mark, Danny, Marco
+SoftDev
+K19 - sqlite3 and DictReader
+2024-10-08
+time spent: 1
+'''
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 
-
 DB_FILE="discobandit.db"
-
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
 #==========================================================
-with open('courses.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-def dbCommands():
-    fin = ""
-    for row in reader:
-        fin += f"(row['code'], row['mark'], row['id'])\n"
-    print(fin)
-    return fin
 
-"""
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-< < < INSERT YOUR TEAM'S DB-POPULATING CODE HERE > > >
+courses_info = csv.DictReader(open("courses.csv"))
+students_info = csv.DictReader(open("students.csv"))
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"""
-dbCommands()
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+c.execute("CREATE TABLE students (name TEXT, age INTEGER, id INTEGER);")
+for x in students_info:
+    print(x)
+    c.execute(f'INSERT INTO students  VALUES (\'{x["name"]}\', {int(x["age"])}, {int(x["id"])});') #Put quotes around string variable so db recognizes it as a data value rather than a column name
+c.execute("CREATE TABLE courses (name TEXT, mark INTEGER, id INTEGER);")
+for y in courses_info:
+    print(y)
+    c.execute(f'INSERT INTO courses VALUES (\'{y["code"]}\', {int(y["mark"])}, {int(y["id"])});')
+
+
 
 #==========================================================
 
