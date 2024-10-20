@@ -1,5 +1,5 @@
 '''
-Mark Ma
+Marco Quintero
 Ghidorah - Mark, Danny, Marco
 SoftDev
 K19 - sqlite3 and DictReader
