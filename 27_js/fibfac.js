@@ -1,5 +1,5 @@
-//The Mexican Warriors :: Tahmim Hassan, Marco Quintero
-//SoftDev pd4
+//Team Mexican Warriors :: Tahmim Hassan, Marco Quintero
+//SoftDev pd04
 //K27 - Basic functions in JavaScript
 //2025-01-06m
 
@@ -17,7 +17,6 @@ let fact = function (n){
 
 //TEST CALLS
 // (writing here can facilitate EZer copy/pasting into dev console now and later...)
-fact(0)
 fact(1)
 fact(2)
 fact(3)
