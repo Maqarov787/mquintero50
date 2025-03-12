@@ -1,0 +1,6 @@
+- Attempts from CoPilot to use FlaskAlchemy
+- Importing lots of random extensions that end with "Form"
+- "from workzeugsecurity" very interesting 
+- SQL was done in a separate SQL file (did not even know that existed)
+- Uses hashlib to protect password integrity by encrypting the actual password
+-
