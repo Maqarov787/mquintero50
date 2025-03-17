@@ -1,0 +1,20 @@
+DISCO:
+- Attempts from CoPilot to use FlaskAlchemy (What is that?)
+- Importing lots of random extensions that end with "Form"
+- "from workzeugsecurity" not sure what that meant but we told CoPilot to write code without it
+- SQL was done in a separate SQL file (did not even know that existed)
+- Uses hashlib to protect password integrity by encrypting the actual password
+- When python file runs, blog.db is outside of the flask app!?!?!?!?!
+- Essentials of the blog app are in order (user account created, new blog, new blog entry all works)
+- New blogs are listed by latest at the bottom (improvement from original attempts)
+- When trying to get CoPilot to do CSS, it would only apply the CSS file to one of the HTML templates
+- Outputted CSS is very basic with one container and navbar on top (still very clean and better than CSS of p0)
+Q/C/C:
+some areas of interest...
+q0: How many tries did it take to "get it right?"
+Three. The first two attempts were to remove extensions we were unfamiliar with what they were used for and the third attempt was to bring SQL connections into the python file.
+q1: Did you catch any errors? If so, how did you notice, and what did you do?
+No errors were caught. The different attempts we asked from CoPilot were due to it using extensions and file types we were unfamiliar with.
+q2: How similar or different is the bot's output to that of your past self / old team?
+All of the essentials of the blog app were very similar to that of Endrit's p0 version of the blog app. The bot's output sorts entries with the latest at the bottom while the original
+version was sorted randomly

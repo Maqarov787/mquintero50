@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ blog[1] }}</h1>
+<ul>
+    {% for entry in entries %}
+        <li>{{ entry[1] }} <a href="{{ url_for('edit_entry', entry_id=entry[0]) }}">Edit</a></li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('new_entry', blog_id=blog[0]) }}">Add New Entry</a>
+{% endblock %}
