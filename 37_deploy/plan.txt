@@ -1,0 +1,2 @@
+Split into two duos 
+Follow the tutorial from digital ocean provided in Link for PM first, take notes, proceed with others when successful.

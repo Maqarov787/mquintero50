@@ -1,0 +1,37 @@
+Notes:
+
+Step 1: Download packages
+    sudo apt update
+    sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
+
+Step 2: Creating Virtual Environment
+
+    sudo apt install python3-venv
+    // making the extra directory is an unnessacary step
+
+    python3.10 -m venv foo
+    // using 3.10 might not work --> use python3 instead
+
+    source foo/bin/activate
+
+Step 3: Setting up a Flask App
+    //All of these commands are done within the virtual enviornment
+    pip install wheel
+    pip install uwsgi flask
+
+    //Create a sample app
+    // Skip this, use app from 35
+
+    sudo ufw allow 5000
+
+    //try to run 35 now, check with droplet ip
+    -- > issue here!! it is not running
+
+    //create wsgi Entry point
+    //new file called wsgi.py in your app containg this:
+
+    from myproject import app
+    if __name__ == "__main__":
+        app.run()
+    
+    
