@@ -128,5 +128,6 @@ def edit_entry(entry_id):
     return render_template('edit_entry.html', entry=entry)
 
 if __name__ == '__main__':
+    app.run(host='0.0.0.0')
     init_db()
     app.run(debug=True)
